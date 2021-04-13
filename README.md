@@ -1,12 +1,16 @@
 # firefox-apple-pay
+
+### Purpose:
 Attempting to make a Firefox extension that alerts if a website supports Apple Pay
 
+**It doesn't work yet**
+
 ### Sources:
-- https://stackoverflow.com/questions/57557939/getting-a-firefox-plugin-to-detect-and-mimic-attempts-to-check-for-apple-pay-sup
-- https://www.reddit.com/r/AppleCard/comments/csgqf4/firefox_plugin_to_detect_apple_pay_support/
-- https://stripe.com/docs/apple-pay
-- https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#testing
-- https://tech.justeattakeaway.com/2016/10/10/bringing-apple-pay-to-the-web/
+- [SO post trying to accomplish this](https://stackoverflow.com/questions/57557939/getting-a-firefox-plugin-to-detect-and-mimic-attempts-to-check-for-apple-pay-sup)
+- [Reddit post by same author asking for help](https://www.reddit.com/r/AppleCard/comments/csgqf4/firefox_plugin_to_detect_apple_pay_support/)
+- [Stripe Apple Pay docs](https://stripe.com/docs/apple-pay)
+- [Mozilla extension tutorial](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#testing)
+- [Blog post about using Apple Pay](https://tech.justeattakeaway.com/2016/10/10/bringing-apple-pay-to-the-web/)
 
 
 ### Testing Apple Pay:
