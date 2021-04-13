@@ -23,3 +23,12 @@ It seems like `window.ApplePaySession` is built into Safari and doesn't exist on
 However when I test with Safari, sites that don't have any checkout at all still have a `window.ApplePaySession` element, so maybe I'm referencing the wrong thing.
 
 The only thing I can think of is to run Apple's own JS as the content script but I'm not sure how to source it.
+
+---
+
+OR maybe we can make a fake `window.ApplePaySession` to trick websites into thinking it exists. It seems like websites mostly use Apple's example test of:
+```js
+if (window.ApplePaySession && ApplePaySession.canMakePayments())
+// Display Apple Pay Button
+```
+So if we can insert a fake element that resolves true, the button might show up but be nonfunctional. This may have been the idea of the SO post author.
