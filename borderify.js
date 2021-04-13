@@ -5,33 +5,32 @@
 window.ApplePaySession = {
 	canMakePayments: function () {
 		console.log('canMakePayments');
+		alert('canMakePayments was called')
 		return Promise.resolve(true);
 	},
 	canMakePaymentsWithActiveCard: function () {
 		console.log('canMakePaymentsWithActiveCard');
+		alert('CMPWAC was called')
 		Promise.resolve(true);
 	},
 };
 
-function notify(message) {
-	console.log("apple pay supported");
-	alert('apple pay supported');
-}
+// function notify(message) {
+// 	console.log("apple pay supported");
+// 	alert('apple pay supported');
+// }
 
-exportFunction(notify, window, {defineAs:'notify'});
-console.log(window.ApplePaySession);
+exportFunction(canMakePayments, window.ApplePaySession, {defineAs:'canMakePayments'});
+exportFunction(canMakePaymentsWithActiveCard, window.ApplePaySession, {defineAs:'canMakePaymentsWithActiveCard'});
+//This seems like the right way to export these functions but they aren't console.logging or alerting anything.
 
-if (typeof ApplePaySession === 'undefined') {
-	return;
-}
-
-
-//copied this part from Apple's source
-if (ApplePaySession && ApplePaySession.canMakePayments()) {
-
-	$('.unsupportedBrowserMessage').css('display', 'none');
-	$('.applePayButton').css('display', 'block');
-
-	console.log('Startup Check: Device is capable of making Apple Pay payments');
-
-}
+//
+// //copied this part from Apple's source
+// if (ApplePaySession && ApplePaySession.canMakePayments()) {
+//
+// 	$('.unsupportedBrowserMessage').css('display', 'none');
+// 	$('.applePayButton').css('display', 'block');
+//
+// 	console.log('Startup Check: Device is capable of making Apple Pay payments');
+//
+// }
