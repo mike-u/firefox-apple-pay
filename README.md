@@ -12,4 +12,4 @@ Attempting to make a Firefox extension that alerts if a website supports Apple P
 - https://applepaydemo.apple.com/
 
 ### Current status:
-
+It seems like `window.ApplePaySession` is built into Safari and doesn't exist on other browsers, so it can't be used to check if we're on an Apple Pay website or not. There's an open [W3C Payment Request API](https://developer.apple.com/documentation/apple_pay_on_the_web/payment_request_api) that might have something that would work, but from my reading it seems unlikely
