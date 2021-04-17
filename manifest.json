@@ -1,10 +1,10 @@
 {
 
   "manifest_version": 2,
-  "name": "Borderify",
+  "name": "Apple Pay Detect",
   "version": "1.0",
 
-  "description": "Adds a red border to all webpages matching mozilla.org.",
+  "description": "Adds a fake Apple Pay API to Firefox to trick websites into displaying an Apple Pay button if it's available.",
 
   "icons": {
     "48": "icons/border-48.png"
@@ -13,7 +13,7 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["borderify.js"]
+      "js": ["applepay.js"]
     }
   ]
 
