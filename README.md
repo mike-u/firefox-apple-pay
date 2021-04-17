@@ -37,3 +37,6 @@ if (window.ApplePaySession && ApplePaySession.canMakePayments())
 So if we can insert a fake element that resolves true, the button might show up but be nonfunctional. This may have been the idea of the SO post author.
 
 I think this will be possible with the `cloneInto` content to page script function.
+
+---
+Added a cloneInto and it works for some sites but not others. They might be checking something else within ApplePaySession or the user agent.

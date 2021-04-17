@@ -1,4 +1,0 @@
-/* I don't know how to actually call this but it seems like a workaround for not being able to use the Apple Pay JS*/
-@supports (-webkit-appearance: -apple-pay-button) {
-	
-}
