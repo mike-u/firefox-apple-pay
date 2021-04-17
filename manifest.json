@@ -7,8 +7,9 @@
   "description": "Adds a fake Apple Pay API to Firefox to trick websites into displaying an Apple Pay button if it's available.",
 
   "icons": {
-    "48": "icons/firefox-apple-pay-48.png",
-    "96": "icons/firefox-apple-pay-96.png"
+    "48": "icons/apple-wallet-48.png",
+    "96": "icons/apple-wallet-96.png",
+    "192": "icons/apple-wallet-192.png"
   },
 
   "content_scripts": [
