@@ -20,7 +20,7 @@ Attempting to make a Firefox extension that alerts if a website supports Apple P
 - [Apple Lightning Cable page, should pop up a "check out with Apple Pay"](https://www.apple.com/shop/product/MX0K2AM/A/usb-c-to-lightning-cable-1-m?fnode=3870ceae8fdafc75e9145ae875be9910dce2ddf0902d9d75afcf1414caa326f2ac761bdbe4373f0aa3c1198e0f1b9eae676c62ee410b97b8ac0a663941efe30123b8999bd74092de3154b7218bcb86239b42efacf568e74623f669d5c58f9079613fe9d612d0033d447adbbc9dae2f49)
 - [Example store supporting Apple Pay, add something to cart and then try to checkout](https://us.minorfigures.com/cart)
 
-### Current status:
+### Notes:
 It seems like `window.ApplePaySession` is built into Safari and doesn't exist on other browsers, so it can't be used to check if we're on an Apple Pay website or not. There's an open [W3C Payment Request API](https://developer.apple.com/documentation/apple_pay_on_the_web/payment_request_api) that might have something that would work, but from my reading it seems unlikely and Firefox says they haven't implemented it.
 
 However when I test with Safari, sites that don't have any checkout at all still have a `window.ApplePaySession` element, so maybe I'm referencing the wrong thing.
@@ -39,4 +39,4 @@ So if we can insert a fake element that resolves true, the button might show up 
 I think this will be possible with the `cloneInto` content to page script function.
 
 ---
-Added a cloneInto and it works for some sites but not others. They might be checking something else within ApplePaySession or the user agent.
+Added a cloneInto and it works for some sites but not others. They might be checking something else within ApplePaySession or the user agent. Switching user agent is kinda doing too much to just detect Apple Pay, I think it'd be better to just detect when sites look for ApplePaySession and alert the user then.

@@ -6,6 +6,7 @@ var ApplePaySession = {
 	canMakePayments: function () {
 		console.log('canMakePayments');
 		// alert('canMakePayments was called')
+		document.body.style.border = "5px solid red"; //trying this example from Mozilla, maybe it will run even if the site can tell we don't fully support Apple Pay
 		return Promise.resolve(true);
 	},
 	canMakePaymentsWithActiveCard: function () {
