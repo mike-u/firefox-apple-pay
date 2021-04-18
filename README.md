@@ -40,4 +40,4 @@ So if we can insert a fake element that resolves true, the button might show up 
 I think this will be possible with the `cloneInto` content to page script function.
 
 ---
-Added a cloneInto and it works for some sites but not others. They might be checking something else within ApplePaySession or the user agent. Switching user agent is kinda doing too much to just detect Apple Pay, I think it'd be better to just detect when sites look for ApplePaySession and alert the user then.
+Added a cloneInto and it works for some sites but not others. They might be checking something else within ApplePaySession or the user agent. Switching user agent is kinda doing too much to just detect Apple Pay, I think it'd be good enough to just detect when sites look for ApplePaySession and alert the user then.
