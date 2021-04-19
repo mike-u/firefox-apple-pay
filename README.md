@@ -41,3 +41,5 @@ I think this will be possible with the `cloneInto` content to page script functi
 
 ---
 Added a cloneInto and it works for some sites but not others. They might be checking something else within ApplePaySession or the user agent. Switching user agent is kinda doing too much to just detect Apple Pay, I think it'd be good enough to just detect when sites look for ApplePaySession and alert the user then.
+
+I found some good info about adding a browser notification but it's hard to test. Firefox seems to not allow self-loaded extensions to request notifications permissions. Just doing an `alert` inside the fake function ends up in triggering 4-5 times on most sites as they look for different stuff so running a notification inside that won't work too well anyway. 
