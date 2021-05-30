@@ -12,6 +12,10 @@
     "192": "icons/apple-wallet-192.png"
   },
 
+  "background": {
+    "scripts": ["notify.js"]
+  },
+
   "content_scripts": [
     {
       "matches": ["*://*/*"],
