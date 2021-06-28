@@ -13,13 +13,13 @@
   },
 
   "background": {
-    "scripts": ["notify.js"]
+    "scripts": ["alertApplePay.js"]
   },
 
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["applepay.js"]
+      "js": ["insertApplePay.js"]
     }
   ],
 

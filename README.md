@@ -44,5 +44,10 @@ Added a cloneInto and it works for some sites but not others. They might be chec
 
 I found some good info about adding a browser notification but it's hard to test. Firefox seems to not allow self-loaded extensions to request notifications permissions. Just doing an `alert` inside the fake function ends up in triggering 4-5 times on most sites as they look for different stuff so running a notification inside that won't work too well anyway.
 
- Mozilla's documentation says that the extension should be granted notifications permissions silently when it's loaded into Firefox. I'm able to call a function from within my fake Apple Pay Available function, but it won't send a notification. I also can't get a console.log to run after the browser.create should have run, so I think it might be erroring out somewhere beforehand.
+Mozilla's documentation says that the extension should be granted notifications permissions silently when it's loaded into Firefox. I'm able to call a function from within my fake Apple Pay Available function, but it won't send a notification. I also can't get a console.log to run after the browser.create should have run, so I think it might be erroring out somewhere beforehand.
+
+Currently trying to use a separate [dev environment](https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Setting_up_extension_development_environment): `/Applications/Firefox.app/Contents/MacOS/firefox-bin -no-remote -P dev &`
+
+This post (https://stackoverflow.com/questions/34912279/error-when-using-chrome-notifications-create-uncaught-typeerror-cannot-read-pr) says that content scripts in Chrome can't send notifications and you'd need to pass the info to a background script. That may be what's happening in FF too. This has some more info: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts
+
 
