@@ -1,13 +1,22 @@
-browser.runtime.onMessage.addListener(notify);
+// browser.runtime.onMessage.addListener(notify);
 
-function notify(message) {
+// function notify(message) {
+//   browser.notifications.create({
+//     "type": "basic",
+//     // "iconUrl": browser.extension.getURL("icons/apple-wallet-48.png"),
+//     "title": "You clicked a link!",
+//     "message": message.url
+//   });
+// }
+
+browser.runtime.onMessage.addListener((message) => {
   browser.notifications.create({
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("link.png"),
-    "title": "You clicked a link!",
-    "message": message.url
+    type: "basic",
+    title: "Apple Pay supported",
+    message: message.content
   });
-}
+});
+
 
 // browser.runtime.onMessage.addListener(alertApplePay);
 
