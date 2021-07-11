@@ -50,4 +50,4 @@ Currently trying to use a separate [dev environment](https://developer.mozilla.o
 
 This post (https://stackoverflow.com/questions/34912279/error-when-using-chrome-notifications-create-uncaught-typeerror-cannot-read-pr) says that content scripts in Chrome can't send notifications and you'd need to pass the info to a background script. That may be what's happening in FF too. This has some more info: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts
 
-
+7/11 - Got the content to background message passing working. I'd like to do something to make sure that notifs only run once even if the inserted canMakePayments is called more than once on a page.
