@@ -23,6 +23,6 @@
     }
   ],
 
-"permissions": ["notifications", "clipboardWrite", "tabs"]
+"permissions": ["notifications", "clipboardWrite"]
 
 }

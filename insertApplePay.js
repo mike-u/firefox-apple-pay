@@ -23,7 +23,7 @@ function notify(message) {
   browser.runtime.sendMessage({content:message});
 }
 
-function copyToClipboard(text, html) {
+function copyToClipboard(text) {
     function oncopy(event) {
         document.removeEventListener("copy", oncopy, true);
         // Hide the event from the page to prevent tampering.
@@ -32,7 +32,6 @@ function copyToClipboard(text, html) {
         // Overwrite the clipboard content.
         event.preventDefault();
         event.clipboardData.setData("text/plain", text);
-        event.clipboardData.setData("text/html", html);
     }
     document.addEventListener("copy", oncopy, true);
 
